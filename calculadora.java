@@ -61,4 +61,10 @@ public class calculadora {
 		float resultado1 = (float) Math.sqrt(numero);
 		return resultado1;
 	}
+	
+	public static float potenciaCubo(int numero){
+		int exponente = 3;
+		float resultado = (float)Math.Pow(numero,exponente);
+		return resultado;
+	}
 }
