@@ -25,13 +25,13 @@ public class calculadora {
 					break;
 			}
 		}
-
+		
 	}
 	public static void menu(){
 		System.out.println("Seleccione otra opcion");
 		System.out.println("1. factorial");
 		System.out.println("2. Salir");
-
+		
 	}
 	public static int factorial(int numero){
 		int facto=1;
@@ -40,10 +40,5 @@ public class calculadora {
 			numero--;
 		}
 		return facto;
-	}
-
-	public static int potencia(int numero){
-		int potencia = numero * numero;
-		return potencia;
 	}
 }
