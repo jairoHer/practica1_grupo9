@@ -7,9 +7,11 @@ public class calculadora {
 		System.out.println("Seleccione una opcion");
 		System.out.println("1. factorial");
 		System.out.println("2. raiz cuadrada");
-		System.out.println("3. Salir");
+		System.out.println("3. Potencia cubica");
+		System.out.println("4. raiz cubica");
+		System.out.println("5. Salir");
 		int opcion = input.nextInt();
-		while (opcion!=3){
+		while (opcion!=5){
 			switch (opcion){
 				case 1:
 					System.out.println("-----Factorial------");
@@ -24,6 +26,22 @@ public class calculadora {
 					System.out.println("Ingrese un numero");
 					int num = input.nextInt();
 					System.out.println("La raíz cuadrada del numero es es: "+raiz(num));
+					menu();
+					opcion = input.nextInt();
+					break;
+				case 3:
+					System.out.println("-----Potencia cubica------");
+					System.out.println("Ingrese un numero");
+					int num = input.nextInt();
+					System.out.println("La raíz cuadrada del numero es es: "+potenciaCubo(num));
+					menu();
+					opcion = input.nextInt();
+					break;
+				case 4:
+					System.out.println("-----Raíz Cubica------");
+					System.out.println("Ingrese un numero");
+					int num = input.nextInt();
+					System.out.println("La raíz cuadrada del numero es es: "+raizCubo(num));
 					menu();
 					opcion = input.nextInt();
 					break;
@@ -55,16 +73,21 @@ public class calculadora {
 		int potencia = numero * numero;
 		return potencia;
 	}
-	
+
 	public static float raiz(int numero)
 	{
 		float resultado1 = (float) Math.sqrt(numero);
 		return resultado1;
 	}
-	
+
 	public static float potenciaCubo(int numero){
 		int exponente = 3;
 		float resultado = (float)Math.Pow(numero,exponente);
+		return resultado;
+	}
+
+	public static float raizCubo(int numero){
+		float resultado=(float)Math.pow(numero,1.0/3.0);
 		return resultado;
 	}
 }
