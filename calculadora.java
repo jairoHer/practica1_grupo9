@@ -135,7 +135,12 @@ public class calculadora {
 	}
 	public static int division(int numero1, int numero2){
 		int resultado =0;
-		resultado = numero1/numero2;
+		if (numero2==0){
+			System.out.println("No se puede realizar division con 0!!");
+		}else{
+			resultado = numero1/numero2;
+			
+		}
 		return resultado;
 	}
 }
